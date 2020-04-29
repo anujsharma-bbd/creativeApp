@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
 
 class HomeComponent extends React.PureComponent {
@@ -10,6 +10,10 @@ class HomeComponent extends React.PureComponent {
       return (
          <View>
             <Text> This is Home screen </Text>
+            <Button
+               title="Go to About"
+               onPress={() => this.props.navigation.navigate('About')}
+            />
          </View>
       );
    }
