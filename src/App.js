@@ -5,15 +5,21 @@ import {
   ScrollView,
   Text
 } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeComponent from './screens/home.component';
+import AboutComponent from './screens/about.component';
 
-const App: () => React$Node = () => {
+const Stack = createStackNavigator();
+const App = () => {
   return (
     <>
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={styles.scrollView}>
-        <Text>Anuj's First Native app anuj</Text>
-      </ScrollView>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={HomeComponent} />
+          <Stack.Screen name="About" component={AboutComponent} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </>
   );
 };
