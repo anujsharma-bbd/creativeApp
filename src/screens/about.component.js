@@ -7,12 +7,12 @@ class AboutComponent extends React.PureComponent {
    }
    render() {
       return (
-         <View>
+         <View style={styles.aboutView}>
             <Text>
                About US screen
             </Text>
             <View>
-               <Button style={styles.backButton} title="Go back" onPress={() => this.props.navigation.goBack()} />
+               <Button style={styles.backButton}  title="Go back" onPress={() => this.props.navigation.goBack()} />
             </View>
          </View>
       );
@@ -22,7 +22,14 @@ export default AboutComponent;
 
 
 const styles = StyleSheet.create({
+   aboutView: {
+      backgroundColor: '#ddd',
+      flex: 1,
+      paddingHorizontal: 20,
+      paddingVertical:20
+   },
    backButton: {
       marginTop: '20px',
+      width: '100px'
    }
 });

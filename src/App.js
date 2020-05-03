@@ -3,7 +3,7 @@ import React from 'react';
 import {
   StyleSheet
 } from 'react-native';
-import { Routes } from './routes/root.routes';
+import { Routes } from './routes/routes.component';
 
 const App = () => {
   return (

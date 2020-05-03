@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
 
 class HomeComponent extends React.PureComponent {
@@ -8,9 +8,9 @@ class HomeComponent extends React.PureComponent {
    }
    render() {
       return (
-         <View>
+         <View style={styles.homeView}>
             <Text> This is Home screen </Text>
-            <Button
+            <Button style={styles.aboutButton}
                title="Go to About"
                onPress={() => this.props.navigation.navigate('About')}
             />
@@ -19,4 +19,17 @@ class HomeComponent extends React.PureComponent {
    }
 }
 
+
+const styles = StyleSheet.create({
+   homeView: {
+      backgroundColor: '#ddd',
+      flex: 1,
+      paddingHorizontal: 20,
+      paddingVertical:20
+   },
+   aboutButton: {
+      marginTop: '200px',
+      width: '100px'
+   }
+});
 export default HomeComponent;
