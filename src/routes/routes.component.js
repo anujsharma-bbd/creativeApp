@@ -12,8 +12,8 @@ export const Routes = () => {
       <NavigationContainer>
          <Stack.Navigator initialRouteName="Login">
             <Stack.Screen name="Login" component={LoginComponent} options={{ headerShown: false }} />
-            <Stack.Screen name="Home" component={HomeComponent} options={{ title: 'Creative App', headerStyle: { backgroundColor: '#ccc' } }} />
-            <Stack.Screen name="About" component={AboutComponent} options={{ headerShown: true, title: 'This is About Us screen', headerBackTitleVisible: false, headerStyle: { backgroundColor: '#ccc' } }} />
+            <Stack.Screen name="Home" component={HomeComponent} options={{ headerLeft: null,title: 'Creative App', headerTitleAlign:'center', headerStyle: { backgroundColor: '#ccc' } }} />
+            <Stack.Screen name="About" component={AboutComponent} options={{ headerShown: true, title: 'This is About Us screen', headerStyle: { backgroundColor: '#ccc' } }} />
          </Stack.Navigator>
       </NavigationContainer>
    );
